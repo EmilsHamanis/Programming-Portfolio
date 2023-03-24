@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>PROGP Skills Demo  - 30%</head>
+<!-- <head> element tag stands for heading-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<h4>Emils Hamanis ID: 20221860</h4>
+<h2> Roll The Dice?</h2>
+<!-- <h1> is also a heading but in different font sizes from h1 being the biggest to lets say h4 being smaller than h1-->
+<button
+onclick="rollthedice()">YES</button>.
+<button onclick="showAlertArrays()">NO</button>
+<!-- <button> creates a non functioning button so you must add a function for it, the way you do it is by adding "onclick" to the button this will act as a function id-->
+<br>
+<br>
+<!-- <br> is just an element tag that breaks lines-->
+
+<p id="result"></p>
+<!-- here im setting up an id="result", id's are just code identifiers, </p> is just a paragraph-->
+
+<!-- <script> is used in JavaScript code which basically allows the webbrowser to execute code-->
+<script>
+
+    function showAlertArrays() {
+ var messages= ["Click YES to roll the dice" , "Please roll the dice" , "Come on!, Roll the dice already"];
+ var randomIndex=
+ Math.floor(Math.random() * messages.length);
+ alert(messages[randomIndex]);
+}
+
+//you can see the ive added in the onclick funtion id into the funtion "showAlertArrays" or the NO button, ive set a <var> or a variable element of messages to be displayed once clicked no, I then used var randomindex in order to display those messages and ive written in a random sequence, as well as ive added in (math.random() to actually make them randomly appear, the code that actually makes those messages appear is alert and messages.length.
+
+
+function rollthedice() {
+    var randomNumber = 
+    Math.floor(Math.random() * 6)+ 1;
+
+    document.getElementById("result").innerHTML =
+
+    "<img src='images/pic" + randomNumber + ".jpg' alt= 'Dice Number is" + randomNumber + "'>" + "<br>" + "You rolled a " + randomNumber + "!";
+            }
+
+            //same thing here, ive essentially just addeds in the functions for the YES button, made my variable to a randomnumber, did math.floor ect * 6 +1 to make it randomly display numbers from 1 to 6, 1 - 6, i used document.getElementById, notice how above the script text ive added in an id "result", so the getelementbyid essentially gives refrences to the id "result", in this case its providing me with random generated numbers and images that correlated to one another, innerHTML is basically used to signify content for the result id, ive also set in a randomNumber variable, so the code essentially picks out a random number, that randomnumber variable is also above the math.floor so it can correlate to each other, once the code picks out a random number it also picks out the images that correlated to that number, so if you rolled a 6 you will get a pic6.jpg images displayed onto the webpage which shows correlation. The <img src ect.. code is in order to present/display the code nicely, after the image part of the code was finished i used break line to prepresent the text neatly, if i havent used it then the text would appear along the bottom right hand side of the dice images which doesnt look nice. I put all the images into a subfolder called "images" and then i put that subfolder where the html file is so its easier for me to naviagate and write down the code which essentially is just "<img src='images/pic"
+        </script>
+
+        <!-- I used JavaScript and HTML to write the code, i debugged and tested the code using console.log(rollthedice) ect so i can see what exactly pops up in the console log of a webpage when you inspect it, console log also provides errors where the webbrowser is having trouble reading your code so anytime i got an error i knew what part of the code i was have trouble with and which line that exact promblem happened in, ive provided images of a couple of problems i had-->
+</body>
+</html>
